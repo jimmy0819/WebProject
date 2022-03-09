@@ -1,21 +1,22 @@
-/*$color1:#fff3bd
-$color2:#fae2be
-$color3:#ac8f87
-$color4:#5f4e47
-$blue:#474f64
-$red:#c05753*/
+/*$red:#c05753
+$blue:#647494
+$lightblue:#ACB4C4
+$orange:#F2BD8E
+$color1:#5F4E47
+$color2:#AC8F87
+$color3:#FAE2BF
+$color4:#FFF3DB
+*/
 
 
 html,body{
-    
     height: 100%;
     margin: 0;
     background-color: white;
-    /*overflow: hidden;*/
 }
 
 *{
-    /*border:2px solid black;*/
+    /*border:1px solid black;*/
     
 }
 /*選單*/
@@ -24,45 +25,77 @@ html,body{
     height: 100px;
     position: relative;
     display: flex;
+    background: linear-gradient(180deg,#FFF3DB,transparent);
 }
 
+.logo{
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo>img{
+    height: 50px;
+}
 .menulist{
     height: 100%;
     font-size: 20px;
+    font-weight: 550;
     font-family: 微軟正黑體;
     position: absolute;
     right: 30px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 .menulist>a{
-    margin-right: 20px;
-    margin-left: 20px;
-    color:initial;
+    height: 35px;
+    width: 120px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #AC8F87;
+    color:#fff;
     text-decoration: initial;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .menulist>a:hover{
-    color:#c05753;
+    background-color: #FAE2BF;
 }
 
 /*主內容*/
 .main{
     width: 100%;
-    height: 80%;
-    display: flex;
     position: relative;
 }
 .twocir{
-    width: 60%;
-    height: 80%;
+    width: 100%;
+    height: 500px;
+    /*background-color: #FFF3DB;*/
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-left: 50px;
-    margin-top: 80px;
+    /*padding-top: 20px;*/
     font-family: 'Noto Serif TC', serif;
+}
+.twocir>p{
+    writing-mode: vertical-lr;
+    font-size: 24px;
+    margin-right: 50px;
+    margin-left: 50px;
+
+}
+.twocir>img{
+    width: 100%;
+    height: 500px;
+    opacity: 0.2;
+    position: absolute;
 }
 
 .cir{
@@ -77,11 +110,13 @@ html,body{
     font-size: 200px;
     color:white;
     position: relative;
+    font-family: 微軟正黑體;
 }
 
 .cir:hover{
-    background-color: #F7DFDA;
+    background-color: #FFF;
     color:#ac8f87;
+    border: 1px solid #5F4E47;
 }
 
 .x{
@@ -94,24 +129,67 @@ html,body{
     font-size: 150px;
     font-family: 微軟正黑體;
     color:#ac8f87;
+    z-index: 2;
 }
 
-h2{
-    font-size:60px;
-}
-hr{
-    border:2px solid #5f4e47;
-    background-color: #5f4e47;
-    margin-top: -20px;
+.aboutarticle{
+    position: relative;
+    font-size: 24px;
 }
 
-.intro{
+.aboutone>img{
+    padding-top: 40px;
+    height: 500px;
+}
+
+.aboutarticle>h3{
+    font-size: 42px;
+    padding-left: 100px;
+    margin-bottom: 0px;
+}
+
+.aboutone{
     height: 600px;
-    color:#5f4e47;
-    font-family: 微軟正黑體;
-    font-size: 18px;
-    margin-left: 80px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
 }
+
+.sticker{
+    background-color: #F2BD8E;
+    width: 150px;
+    height: 25px;
+    position: absolute;
+    border: 1px solid black;
+    left: 590px;
+    top: 65px;
+    transform: rotate(135deg);
+}
+.sticker2{
+    background-color: #F2BD8E;
+    width: 150px;
+    height: 25px;
+    position: absolute;
+    border: 1px solid black;
+    right: -40px;
+    bottom: 80px;
+    transform: rotate(135deg);
+}
+
+.aboutone>p{
+    font-size: 20px;
+    font-family: 'Noto Serif TC', serif;
+    padding-left: 100px;
+    padding-right: 20px;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.longpic{
+    width: 100%;
+    padding-top: 50px;
+}
+
 
 .ig{
     width: 40px;
@@ -143,30 +221,26 @@ hr{
     top: 5px;
 }
 
-
-.follow{
-    display: flex;
-    align-items: center;
-}
-
 .footer{
     width: 100%;
     height: 20%;
-    background-color: #5f4e47;
-    color:white;
-    display: flex;
+    font-size: 16px;
+    /*background-color: #FFF3DB;*/
+    color:#647494;
+    position: relative;
     align-items: center;
     justify-content: center;
-}
-.footer>img{
-    height: 120px;
-}
-p{
-    font-size: 24px;
-    font-family: 微軟正黑體;
-}
-.pp{
-    margin-left: 25px;
-    margin-top: -8px;
     text-align: center;
+}
+.footer>h4{
+    margin-top: 10px;
+    opacity: 0.5;
+}
+.footerlogo{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+.footerlogo>img{
+    height: 50px;
 }
